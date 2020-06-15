@@ -1,0 +1,16 @@
+{
+  "name": "cmq_ui",
+  "version": "1.0.0",
+  "description": "UI components Library with Vue.js",
+  "main": "cmq_ui.umd.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vue",
+    "cmq-ui",
+    "ui"
+  ],
+  "author": "陈明秋",
+  "license": "ISC"
+}

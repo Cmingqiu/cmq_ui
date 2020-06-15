@@ -1,0 +1,60 @@
+.c-btn {
+  outline: none;
+  padding: 0 15px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  line-height: $line-height-base;
+  height: 32px;
+  background-image: none;
+  background-color: $white;
+  white-space: nowrap;
+  border: 1px solid $border-color-base;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: color 0.3s linear, background-color 0.3s linear,
+    border 0.3s linear, box-shadow 0.3s linear;
+
+  &:hover {
+    color: $primary-color;
+    border-color: $primary-color;
+  }
+
+  @each $type,
+  $color in ("primary": $primary-color,
+    "success": $success-color,
+    "info": $info-color,
+    "warning": $warning-color,
+    "error": $error-color,
+    // "default": $default-color
+  ) {
+    &-#{$type} {
+      color: #fff;
+      border-color: $color;
+      background-color: $color;
+    }
+
+    &-#{$type}:hover {
+      color: #fff;
+      border-color: $color;
+      background-color: lighten($color, 10%);
+    }
+
+    &-#{$type}:active {
+      color: #fff;
+      border-color: $color;
+      background-color: darken($color, 5%);
+    }
+  }
+
+  &-disabled,
+  &-disabled:hover,
+  &-disabled:active {
+    cursor: $cursor-disabled;
+    color: $btn-disable-color;
+    background-color: $background-color-base;
+    border-color: $border-color-base;
+  }
+}

@@ -1,0 +1,32 @@
+.c-form-item {
+  margin-bottom: 8px;
+
+  &-label {
+    float: left;
+    text-align: right;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #495060;
+    background: transparent;
+    line-height: 32px;
+    padding: 0 12px 0 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &-content {
+    position: relative;
+    line-height: 32px;
+    font-size: 12px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+    width: 0;
+    visibility: hidden;
+  }
+}
